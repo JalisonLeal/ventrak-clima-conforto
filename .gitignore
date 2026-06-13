@@ -1,0 +1,18 @@
+# Sistema
+.DS_Store
+Thumbs.db
+*.log
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Ferramentas / dependências (este projeto é zero-dependência; nada disso deve existir)
+node_modules/
+.vercel/
+.cache/
+
+# Material de trabalho fora do deploy (vídeos brutos não comprimidos, referências)
+media/raw/
+*.psd
