@@ -33,6 +33,10 @@
 
   // ---------- Ciclo de vida dos vídeos ----------
   function ensure(i) {
+    // Carrega poster da cena via data-src quando necessário
+    const poster = scenes[i]?.querySelector('.scene-poster[data-src]');
+    if (poster) { poster.src = poster.dataset.src; delete poster.dataset.src; }
+
     if (noVideo || i < 0 || i >= vids.length) return;
     const v = vids[i];
     if (!v || v.src) return;
