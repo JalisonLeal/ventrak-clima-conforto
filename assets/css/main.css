@@ -96,6 +96,16 @@ a { color: inherit; text-decoration: none; }
 
 .scene.live .scene-video { opacity: 1; }
 
+/* Hero (AC exploded view): show full unit on portrait mobile — other scenes stay cover */
+@media (max-width: 768px) and (orientation: portrait) {
+  .scene[data-scene="0"] .scene-poster,
+  .scene[data-scene="0"] .scene-video,
+  .scene[data-scene="6"] .scene-poster,
+  .scene[data-scene="6"] .scene-video {
+    object-fit: contain;
+  }
+}
+
 .scene-night { filter: brightness(.5) saturate(.85); }
 
 .stage-tint {
